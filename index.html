@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>松井塗装｜外壁塗装・防水工事・コーキング工事</title>
+<meta name="description" content="外壁塗装・防水工事・コーキング工事なら松井塗装。外構工事、樋交換、補修工事まで幅広く対応。無料お見積り承ります。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2a4a;
+    --navy-deep:#081b33;
+    --blue:#1e5a96;
+    --blue-bright:#2f7ac2;
+    --sky:#eaf2fa;
+    --paper:#fbfaf7;
+    --white:#ffffff;
+    --ink:#1b2733;
+    --ink-soft:#4c5b6b;
+    --line:#d9e2ea;
+    --gold:#b8935a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.mincho{font-family:'Shippori Mincho', serif;}
+  .accent-gold{color:#ffd27a;}
+  .accent-gold-dark{color:#a87b32;font-weight:700;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  /* ===== Header ===== */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(251,250,247,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    max-width:1100px;margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{
+    display:flex;align-items:baseline;gap:8px;
+  }
+  .logo-mark{
+    font-family:'Shippori Mincho', serif;
+    font-weight:800;font-size:22px;color:var(--navy);letter-spacing:.04em;
+  }
+  .logo-sub{font-size:11px;color:var(--ink-soft);letter-spacing:.08em;}
+  nav{display:flex;gap:28px;font-size:14px;font-weight:500;}
+  nav a{position:relative;padding:4px 0;color:var(--ink);}
+  nav a::after{
+    content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--blue-bright);
+    transition:width .25s ease;
+  }
+  nav a:hover::after{width:100%;}
+  .header-tel{
+    display:flex;align-items:center;gap:10px;
+    font-family:'Shippori Mincho', serif;font-weight:700;font-size:17px;color:var(--navy);
+  }
+  .header-tel span.small{font-size:11px;color:var(--ink-soft);font-family:'Zen Kaku Gothic New', sans-serif;display:block;font-weight:500;}
+  .header-actions{display:flex;align-items:center;gap:16px;}
+  .header-line{
+    display:flex;align-items:center;gap:7px;
+    background:#06C755;color:#fff;font-size:12.5px;font-weight:700;
+    padding:9px 16px;border-radius:20px;white-space:nowrap;
+    transition:filter .2s ease;
+  }
+  .header-line:hover{filter:brightness(1.08);}
+  @media (max-width:600px){
+    .header-line span{display:none;}
+  }
+  @media (max-width:820px){
+    nav{display:none;}
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;align-items:center;
+    padding-top:80px;
+    background:
+      linear-gradient(160deg, rgba(8,27,51,0.86) 0%, rgba(15,42,74,0.72) 55%, rgba(30,90,150,0.55) 100%),
+      repeating-linear-gradient(135deg, #123b63 0px, #123b63 2px, #0f3457 2px, #0f3457 40px);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:64px 64px;
+    mask-image:linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  }
+  .hero-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:60px 24px;width:100%;}
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    color:#cfe0f2;font-size:13px;letter-spacing:.14em;font-weight:500;
+    margin-bottom:28px;
+  }
+  .hero-eyebrow::before{content:"";width:32px;height:1px;background:var(--gold);}
+  .hero h1{
+    color:#fff;
+    font-size:clamp(34px, 5.6vw, 62px);
+    font-weight:800;
+    line-height:1.35;
+    letter-spacing:.02em;
+    margin-bottom:28px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    display:block;
+    font-size:.62em;
+    font-weight:500;
+    margin-top:14px;
+    letter-spacing:.06em;
+  }
+  .hero h1 em.accent-gold{color:#ffd27a;}
+  .hero-lead{
+    color:#c9d9e8;font-size:15.5px;max-width:520px;margin-bottom:40px;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:16px 30px;font-weight:700;font-size:15px;
+    border-radius:2px;letter-spacing:.03em;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn-primary{
+    background:var(--blue-bright);color:#fff;
+    box-shadow:0 8px 24px rgba(47,122,194,0.35);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(47,122,194,0.45);}
+  .btn-outline{
+    border:1px solid rgba(255,255,255,0.5);color:#fff;
+  }
+  .btn-outline:hover{background:rgba(255,255,255,0.1);}
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:56px;
+    max-width:640px;
+  }
+  .hero-stat{
+    padding:22px 18px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.22);
+    border-top:2px solid var(--gold);
+    backdrop-filter:blur(4px);
+  }
+  .hero-stat b{
+    display:block;color:#fff;font-family:'Shippori Mincho', serif;font-size:26px;font-weight:800;
+    margin-bottom:6px;
+  }
+  .hero-stat span{color:#dcecfa;font-size:12px;letter-spacing:.02em;line-height:1.5;display:block;}
+  @media (max-width:600px){
+    .hero-stats{grid-template-columns:1fr;}
+  }
+
+  /* ===== Section shared ===== */
+  section{padding:110px 0;}
+  .section-head{max-width:640px;margin-bottom:64px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    color:var(--blue);font-size:12.5px;letter-spacing:.16em;font-weight:700;margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);}
+  .section-head h2{
+    font-size:clamp(26px,3.2vw,36px);color:var(--navy);font-weight:700;line-height:1.5;margin-bottom:18px;
+  }
+  .section-head p{color:var(--ink-soft);font-size:15px;max-width:520px;}
+  .bg-navy{background:var(--navy-deep);color:#e8eef4;}
+  .bg-navy .section-head h2{color:#fff;}
+  .bg-navy .eyebrow{color:#8fc0e8;}
+  .bg-sky{background:var(--sky);}
+
+  /* ===== Worries ===== */
+  .worry-section{background:var(--navy-deep);position:relative;overflow:hidden;}
+  .worry-section .section-head h2{color:#fff;}
+  .worry-section .section-head p{color:#a9c1d8;}
+  .worry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .worry-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.14);
+    padding:32px 24px 30px;text-align:center;
+    position:relative;
+    overflow:hidden;
+    min-height:180px;
+    display:flex;align-items:flex-end;
+  }
+  .worry-icon{
+    position:absolute;
+    top:50%;left:50%;
+    width:180px;height:180px;
+    transform:translate(-50%,-50%);
+    opacity:0.16;
+    display:flex;align-items:center;justify-content:center;
+    pointer-events:none;
+  }
+  .worry-icon svg{width:100%;height:100%;}
+  .worry-card::before{
+    content:none;
+  }
+  .worry-card p{
+    color:#fff;font-size:14.5px;line-height:1.7;font-weight:700;
+    position:relative;z-index:2;
+    text-shadow:0 2px 10px rgba(0,0,0,0.5);
+  }
+  .worry-arrow{
+    text-align:center;margin-top:48px;
+    color:#ffd27a;font-size:22px;font-weight:800;letter-spacing:.04em;
+    font-family:'Shippori Mincho', serif;
+  }
+  @media (max-width:820px){
+    .worry-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){
+    .worry-grid{grid-template-columns:1fr;}
+  }
+
+  /* ===== Strengths ===== */
+  .strengths{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .strength{background:var(--white);padding:44px 34px;}
+  .strength-icon{
+    width:52px;height:52px;border-radius:50%;background:var(--sky);
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  }
+  .strength-icon svg{width:26px;height:26px;stroke:var(--blue);fill:none;stroke-width:1.6;}
+  .strength-no{font-family:'Shippori Mincho', serif;color:var(--line);font-size:15px;font-weight:700;margin-bottom:10px;letter-spacing:.1em;}
+  .strength h3{font-size:18px;color:var(--navy);font-weight:700;margin-bottom:14px;letter-spacing:.02em;}
+  .strength p{font-size:13.8px;color:var(--ink-soft);}
+  @media (max-width:820px){.strengths{grid-template-columns:1fr;}}
+
+  /* ===== Services ===== */
+  .bg-service{background:var(--white);}
+  .service-list{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .service-row{
+    padding:38px 30px 34px;
+    background:var(--sky);
+    border:1px solid var(--line);
+    border-top:3px solid var(--blue-bright);
+    transition:transform .25s ease, box-shadow .25s ease;
+    position:relative;
+    overflow:hidden;
+    min-height:210px;
+  }
+  .service-row:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(15,42,74,0.1);}
+  .service-icon{
+    position:absolute;
+    top:50%;right:-10px;
+    width:190px;height:190px;
+    transform:translateY(-50%);
+    opacity:0.14;
+    display:flex;align-items:center;justify-content:center;
+    pointer-events:none;
+    background:none;box-shadow:none;
+  }
+  .service-icon svg{width:100%;height:100%;}
+  .service-row h3{font-size:19px;font-weight:700;color:#a87b32;letter-spacing:.02em;margin-bottom:12px;position:relative;z-index:2;}
+  .service-row p{font-size:13.5px;color:var(--ink-soft);position:relative;z-index:2;}
+  @media (max-width:820px){
+    .service-list{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){
+    .service-list{grid-template-columns:1fr;}
+  }
+
+  /* ===== Works / 実績 ===== */
+  .works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .work-card{
+    background:var(--white);border:1px solid var(--line);
+    overflow:hidden;
+    transition:box-shadow .25s ease, transform .25s ease;
+  }
+  .work-card:hover{box-shadow:0 18px 34px rgba(15,42,74,0.12);transform:translateY(-4px);}
+  .work-thumb{
+    height:190px;position:relative;
+    display:flex;align-items:center;justify-content:center;
+    color:#eaf2fa;font-family:'Shippori Mincho', serif;font-size:14px;letter-spacing:.1em;
+  }
+  .work-thumb span{position:relative;z-index:2;background:rgba(8,27,51,0.35);padding:6px 16px;border:1px solid rgba(255,255,255,0.4);}
+  .work-thumb.t1{background:linear-gradient(135deg,#1e5a96,#0f2a4a);}
+  .work-thumb.t2{background:linear-gradient(135deg,#2f7ac2,#123b63);}
+  .work-thumb.t3{background:linear-gradient(135deg,#0f2a4a,#1e5a96);}
+  .work-body{padding:24px 26px 28px;}
+  .work-tag{display:inline-block;font-size:11px;letter-spacing:.06em;color:var(--blue);border:1px solid var(--blue);padding:3px 10px;margin-bottom:14px;}
+  .work-body h3{font-size:16.5px;color:var(--navy);font-weight:700;margin-bottom:10px;}
+  .work-body p{font-size:13.3px;color:var(--ink-soft);}
+  .work-note{
+    margin-top:56px;text-align:center;font-size:13px;color:var(--ink-soft);
+    border:1px dashed var(--line);padding:20px;background:var(--white);
+  }
+  @media (max-width:820px){.works-grid{grid-template-columns:1fr;}}
+
+  /* ===== Flow ===== */
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+  .flow-step{padding:0 20px;position:relative;}
+  .flow-step:not(:last-child)::after{
+    content:"→";position:absolute;right:-4px;top:14px;color:var(--line);font-size:20px;
+  }
+  .flow-step .fnum{
+    width:42px;height:42px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-family:'Shippori Mincho', serif;font-weight:700;font-size:16px;
+    margin-bottom:18px;color:#fff;border:none;
+  }
+  .flow-step:nth-child(1) .fnum{background:#2f7ac2;}
+  .flow-step:nth-child(2) .fnum{background:#1e5a96;}
+  .flow-step:nth-child(3) .fnum{background:#164478;}
+  .flow-step:nth-child(4) .fnum{background:var(--navy-deep);}
+  .flow-step h3{font-size:15px;color:var(--navy);font-weight:700;margin-bottom:10px;}
+  .flow-step p{font-size:12.8px;color:var(--ink-soft);}
+  @media (max-width:820px){
+    .flow{grid-template-columns:1fr;gap:36px;}
+    .flow-step:not(:last-child)::after{content:"↓";right:auto;left:20px;top:auto;bottom:-30px;}
+  }
+
+  /* ===== Voice / Company ===== */
+  .company-table{width:100%;border-collapse:collapse;font-size:14px;}
+  .company-table tr{border-bottom:1px solid var(--line);}
+  .company-table th{
+    text-align:left;padding:18px 20px 18px 0;width:150px;color:var(--navy);font-weight:700;
+    vertical-align:top;
+  }
+  .company-table td{padding:18px 0;color:var(--ink-soft);}
+
+  /* ===== Contact ===== */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+  .contact-card{
+    background:var(--white);border:1px solid var(--line);padding:36px 32px;
+  }
+  .contact-card h3{color:var(--navy);font-size:17px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+  .contact-card .big-tel{
+    font-family:'Shippori Mincho', serif;font-size:30px;font-weight:700;color:var(--navy);margin:10px 0 6px;
+  }
+  .contact-card .note{font-size:12.5px;color:var(--ink-soft);}
+  .contact-card .btn{width:100%;justify-content:center;margin-top:18px;}
+  .form-group{margin-bottom:18px;}
+  .form-group label{display:block;font-size:13px;color:var(--navy);font-weight:700;margin-bottom:8px;}
+  .req-badge,.opt-badge{
+    display:inline-block;font-size:10.5px;font-weight:700;
+    padding:2px 8px;border-radius:2px;margin-left:8px;letter-spacing:.04em;
+    vertical-align:middle;
+  }
+  .req-badge{background:#fde8e8;color:#c0392b;}
+  .opt-badge{background:var(--sky);color:var(--ink-soft);}
+  .form-group input,.form-group select,.form-group textarea{
+    width:100%;border:1px solid var(--line);padding:12px 14px;font-size:14px;font-family:inherit;
+    background:var(--paper);
+  }
+  .form-group textarea{resize:vertical;min-height:100px;}
+  @media (max-width:820px){.contact-grid{grid-template-columns:1fr;}}
+
+  /* ===== Footer ===== */
+  footer{background:var(--navy-deep);color:#8fa4b9;padding:48px 0 28px;font-size:12.5px;}
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+  .footer-logo{font-family:'Shippori Mincho', serif;color:#fff;font-size:18px;font-weight:700;}
+
+  /* fade-in on scroll */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* stagger items */
+  .stagger-item{
+    opacity:0;transform:translateY(22px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .stagger-item.in{opacity:1;transform:none;}
+  @media (max-width:820px){
+    .stagger-item{
+      opacity:1 !important;transform:none !important;transition:none !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-mark">松井塗装</span>
+      <span class="logo-sub">MATSUI TOSOU</span>
+    </div>
+    <nav>
+      <a href="#strengths">選ばれる理由</a>
+      <a href="#service">サービス</a>
+      <a href="#works">施工事例</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <div class="header-actions">
+      <div class="header-tel">
+        <span>
+          <span class="small">お電話でのご相談</span>
+          000-0000-0000
+        </span>
+      </div>
+      <a href="#" class="header-line">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 5.79 2 10.44c0 4.2 3.6 7.72 8.46 8.36.33.07.78.22.89.5.1.25.07.65.03.9l-.14.86c-.04.25-.2.99.86.54s5.7-3.36 7.78-5.75c1.43-1.58 2.12-3.18 2.12-4.95C22 5.79 17.52 2 12 2z"/></svg>
+        <span>公式LINEで相談</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">外壁塗装・防水工事・コーキング工事</div>
+    <h1>大切な建物を、<br>長く守る仕事を。<em class="accent-gold">外壁・防水・コーキングの専門店 松井塗装</em></h1>
+    <p class="hero-lead">
+      外壁塗装、防水工事、コーキング工事を中心に、外構工事・樋交換・補修工事まで幅広く対応。
+      現地調査からお見積りまで無料、丁寧なヒアリングでお客様の<span class="accent-gold">不安</span>に寄り添います。
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">無料お見積りはこちら</a>
+      <a href="#works" class="btn btn-outline">施工事例を見る</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><b>無料</b><span>現地調査・お見積り</span></div>
+      <div class="hero-stat"><b>即日</b><span>お電話でのご相談対応</span></div>
+      <div class="hero-stat"><b>地域</b><span>密着の丁寧な施工</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="worry-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">WORRIES</div>
+      <h2>こんなお悩み<br>ありませんか？</h2>
+      <p>住まいのことでこんな<span class="accent-gold">不安</span>を抱えていませんか？松井塗装がしっかりお応えします。</p>
+    </div>
+    <div class="worry-grid reveal">
+      <div class="worry-card stagger-item">
+        <div class="worry-icon">
+          <svg viewBox="0 0 64 64">
+            <rect x="10" y="10" width="44" height="44" fill="#c7d6e3" stroke="#8fc0e8" stroke-width="1.5"/>
+            <path d="M16 54L28 30L22 26L38 10" stroke="#0f2a4a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <path d="M40 54L46 38L40 32L50 18" stroke="#0f2a4a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p>外壁のひび割れ・色あせが気になる</p>
+      </div>
+      <div class="worry-card stagger-item">
+        <div class="worry-icon">
+          <svg viewBox="0 0 64 64">
+            <path d="M32 10L54 28V54H10V28z" fill="#c7d6e3" stroke="#8fc0e8" stroke-width="1.5"/>
+            <path d="M24 54V38h16v16" fill="#0f2a4a"/>
+            <path d="M40 20c0 4-5 6-5 10a5 5 0 0 0 10 0c0-4-5-6-5-10z" fill="#2f7ac2"/>
+            <path d="M46 44l3 4M50 40l3 4" stroke="#2f7ac2" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p>雨漏りしているかもしれない</p>
+      </div>
+      <div class="worry-card stagger-item">
+        <div class="worry-icon">
+          <svg viewBox="0 0 64 64">
+            <circle cx="32" cy="30" r="22" fill="#c7d6e3" stroke="#8fc0e8" stroke-width="1.5"/>
+            <path d="M46 48l10 10" stroke="#8fc0e8" stroke-width="1.5"/>
+            <text x="32" y="40" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#0f2a4a" text-anchor="middle">?</text>
+          </svg>
+        </div>
+        <p>どこに頼めばいいか分からない・相場が分からない</p>
+      </div>
+      <div class="worry-card stagger-item">
+        <div class="worry-icon">
+          <svg viewBox="0 0 64 64">
+            <path d="M32 8l20 7v15c0 14-9 22-20 26C21 52 12 44 12 30V15z" fill="#c7d6e3" stroke="#8fc0e8" stroke-width="1.5"/>
+            <path d="M32 20v14M32 40v2" stroke="#0f2a4a" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p>訪問販売・悪徳業者が<span class="accent-gold">不安</span></p>
+      </div>
+    </div>
+    <div class="worry-arrow reveal">↓ そのお悩み、松井塗装が解決します ↓</div>
+  </div>
+</section>
+
+<section id="strengths" class="bg-sky">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">STRENGTHS</div>
+      <h2>松井塗装が<br>選ばれる理由</h2>
+      <p>初めての外壁塗装でも安心していただけるよう、<span class="accent-gold-dark">価格</span>・<span class="accent-gold-dark">工事内容</span>ともに明確にご説明します。</p>
+    </div>
+    <div class="strengths reveal">
+      <div class="strength stagger-item">
+        <div class="strength-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <div class="strength-no">01</div>
+        <h3>現地調査・お見積り無料</h3>
+        <p>建物の状態をしっかり確認した上で、必要な工事だけをご提案。追加費用が発生する場合も事前にご説明します。</p>
+      </div>
+      <div class="strength stagger-item">
+        <div class="strength-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+        <div class="strength-no">02</div>
+        <h3>幅広い対応範囲</h3>
+        <p>外壁塗装・防水工事・コーキング工事はもちろん、外構工事や樋交換、ちょっとした補修工事まで一括してご相談いただけます。</p>
+      </div>
+      <div class="strength stagger-item">
+        <div class="strength-icon"><svg viewBox="0 0 24 24"><path d="M8 12h8M8 16h5M7 4h10a2 2 0 0 1 2 2v13l-3-2-3 2-3-2-3 2V6a2 2 0 0 1 2-2z"/></svg></div>
+        <div class="strength-no">03</div>
+        <h3>丁寧なヒアリングと報告</h3>
+        <p>工事前・工事中・工事後、それぞれの段階でお客様に状況をご報告。分からないことはいつでもお気軽にお尋ねください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="service" class="bg-service">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">SERVICE</div>
+      <h2>サービス内容</h2>
+      <p>塗装・防水・コーキングを中心に、住まいまわりのお困りごとに幅広く対応します。</p>
+    </div>
+    <div class="service-list reveal">
+      <div class="service-row stagger-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 64 64">
+            <rect x="10" y="18" width="30" height="34" fill="#dbe8f4" stroke="#1e5a96" stroke-width="1.5"/>
+            <rect x="14" y="23" width="8" height="8" fill="#fff" stroke="#1e5a96" stroke-width="1.2"/>
+            <rect x="26" y="23" width="8" height="8" fill="#fff" stroke="#1e5a96" stroke-width="1.2"/>
+            <rect x="14" y="36" width="20" height="10" fill="#fff" stroke="#1e5a96" stroke-width="1.2"/>
+            <rect x="32" y="8" width="6" height="20" rx="1" fill="#2f7ac2" transform="rotate(45 35 18)"/>
+            <rect x="40" y="6" width="12" height="8" rx="1.5" fill="#0f2a4a" transform="rotate(45 46 10)"/>
+            <path d="M38 34c4 2 8 4 8 9s6 4 8 1" stroke="#b8935a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>外壁塗装</h3>
+        <p>建物の美観と耐久性を保つ外壁塗装。塗料の種類や色のご相談も承ります。</p>
+      </div>
+      <div class="service-row stagger-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 64 64">
+            <rect x="8" y="30" width="48" height="18" fill="#dbe8f4" stroke="#1e5a96" stroke-width="1.5"/>
+            <rect x="8" y="26" width="48" height="6" fill="#2f7ac2"/>
+            <path d="M20 14c0 5-6 7-6 13a6 6 0 0 0 12 0c0-6-6-8-6-13z" fill="#8fc0e8" stroke="#1e5a96" stroke-width="1.4"/>
+            <path d="M38 10c0 4-5 6-5 11a5 5 0 0 0 10 0c0-5-5-7-5-11z" fill="#bcd9ef" stroke="#1e5a96" stroke-width="1.4"/>
+          </svg>
+        </div>
+        <h3>防水工事</h3>
+        <p>屋上・ベランダなどの防水施工で、雨漏りや建物内部の劣化を防ぎます。</p>
+      </div>
+      <div class="service-row stagger-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 64 64">
+            <rect x="8" y="14" width="20" height="20" fill="#eaf2fa" stroke="#c7d6e3" stroke-width="1"/>
+            <rect x="28" y="14" width="20" height="20" fill="#eaf2fa" stroke="#c7d6e3" stroke-width="1"/>
+            <rect x="8" y="34" width="20" height="20" fill="#eaf2fa" stroke="#c7d6e3" stroke-width="1"/>
+            <rect x="28" y="34" width="20" height="20" fill="#eaf2fa" stroke="#c7d6e3" stroke-width="1"/>
+            <rect x="26" y="10" width="4" height="48" fill="#b8935a"/>
+            <rect x="6" y="32" width="46" height="4" fill="#b8935a"/>
+            <rect x="40" y="20" width="16" height="7" rx="1.5" fill="#0f2a4a" transform="rotate(30 48 24)"/>
+            <rect x="34" y="26" width="8" height="14" rx="1" fill="#2f7ac2" transform="rotate(30 38 33)"/>
+          </svg>
+        </div>
+        <h3>コーキング工事</h3>
+        <p>外壁の目地やサッシまわりの劣化したコーキングを打ち替え、防水性を確保します。</p>
+      </div>
+      <div class="service-row stagger-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 64 64">
+            <rect x="6" y="26" width="52" height="4" fill="#b8935a"/>
+            <rect x="6" y="42" width="52" height="4" fill="#b8935a"/>
+            <rect x="10" y="18" width="4" height="34" fill="#8fa4b9"/>
+            <rect x="24" y="18" width="4" height="34" fill="#8fa4b9"/>
+            <rect x="38" y="18" width="4" height="34" fill="#8fa4b9"/>
+            <rect x="50" y="18" width="4" height="34" fill="#8fa4b9"/>
+            <path d="M20 12l6 6-6 6-6-6z" fill="#2f7ac2"/>
+          </svg>
+        </div>
+        <h3>外構工事</h3>
+        <p>フェンスや門まわりなど、外構部分の施工・補修に対応します。</p>
+      </div>
+      <div class="service-row stagger-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 64 64">
+            <path d="M12 10h40l-4 4H16z" fill="#c7d6e3" stroke="#1e5a96" stroke-width="1.2"/>
+            <rect x="14" y="14" width="34" height="7" rx="1.5" fill="#8fc0e8" stroke="#1e5a96" stroke-width="1.2"/>
+            <rect x="40" y="21" width="6" height="22" fill="#8fc0e8" stroke="#1e5a96" stroke-width="1.2"/>
+            <path d="M40 43q0 8 8 8" stroke="#1e5a96" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <circle cx="20" cy="30" r="1.6" fill="#2f7ac2"/>
+            <circle cx="20" cy="36" r="1.6" fill="#2f7ac2"/>
+            <circle cx="20" cy="42" r="1.6" fill="#2f7ac2"/>
+          </svg>
+        </div>
+        <h3>樋（とい）交換</h3>
+        <p>破損・劣化した雨樋の交換で、雨水の排水トラブルを解消します。</p>
+      </div>
+      <div class="service-row stagger-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 64 64">
+            <rect x="8" y="10" width="48" height="44" fill="#dbe8f4" stroke="#1e5a96" stroke-width="1.5"/>
+            <path d="M20 10L34 30L26 34L38 54" stroke="#0f2a4a" stroke-width="1.6" fill="none"/>
+            <path d="M34 40l14 -10l4 4l-14 10z" fill="#b8935a" stroke="#0f2a4a" stroke-width="1.2"/>
+            <rect x="44" y="18" width="10" height="6" rx="1" fill="#2f7ac2" transform="rotate(45 49 21)"/>
+          </svg>
+        </div>
+        <h3>補修工事</h3>
+        <p>ひび割れや部分的な破損など、住まいの気になる箇所を修繕します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">WORKS</div>
+      <h2>施工事例</h2>
+      <p>これまでの施工事例をご紹介します。※現在準備中の仮データです。今後、実際の施工写真に順次差し替えていきます。</p>
+    </div>
+    <div class="works-grid reveal">
+      <div class="work-card stagger-item">
+        <div class="work-thumb t1"><span>施工事例 写真準備中</span></div>
+        <div class="work-body">
+          <span class="work-tag">外壁塗装</span>
+          <h3>戸建て住宅 外壁塗装工事</h3>
+          <p>経年劣化していた外壁を全面塗装。耐候性の高い塗料で仕上げ、建物の印象を一新しました。</p>
+        </div>
+      </div>
+      <div class="work-card stagger-item">
+        <div class="work-thumb t2"><span>施工事例 写真準備中</span></div>
+        <div class="work-body">
+          <span class="work-tag">防水工事</span>
+          <h3>ベランダ防水工事</h3>
+          <p>ひび割れが見られたベランダの防水層を補修。雨漏りのリスクを解消し、耐久性を高めました。</p>
+        </div>
+      </div>
+      <div class="work-card stagger-item">
+        <div class="work-thumb t3"><span>施工事例 写真準備中</span></div>
+        <div class="work-body">
+          <span class="work-tag">コーキング工事</span>
+          <h3>外壁目地 コーキング打ち替え</h3>
+          <p>劣化していた目地のコーキングを打ち替え、外壁内部への雨水の侵入を防ぎました。</p>
+        </div>
+      </div>
+    </div>
+    <div class="work-note reveal">
+      施工事例は今後随時追加してまいります。写真・詳細情報をご用意いただき次第、順次掲載いたします。
+    </div>
+  </div>
+</section>
+
+<section class="bg-sky">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">FLOW</div>
+      <h2>ご依頼の流れ</h2>
+      <p>お問い合わせから施工完了まで、丁寧にご案内します。</p>
+    </div>
+    <div class="flow reveal">
+      <div class="flow-step stagger-item">
+        <div class="fnum">1</div>
+        <h3>お問い合わせ</h3>
+        <p>お電話・フォーム・公式LINEよりお気軽にご連絡ください。</p>
+      </div>
+      <div class="flow-step stagger-item">
+        <div class="fnum">2</div>
+        <h3>現地調査・お見積り</h3>
+        <p>建物の状態を確認し、無料でお見積りをご提示します。</p>
+      </div>
+      <div class="flow-step stagger-item">
+        <div class="fnum">3</div>
+        <h3>ご契約・工事日程</h3>
+        <p>内容にご納得いただいてから、工事日程を調整します。</p>
+      </div>
+      <div class="flow-step stagger-item">
+        <div class="fnum">4</div>
+        <h3>施工・完了報告</h3>
+        <p>丁寧に施工し、完了後の状態をご確認いただきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="company">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">COMPANY</div>
+      <h2>会社概要</h2>
+    </div>
+    <table class="company-table reveal">
+      <tr><th>屋号・屋号名</th><td>松井塗装（仮）</td></tr>
+      <tr><th>事業内容</th><td>外壁塗装／防水工事／コーキング工事／外構工事／樋交換／補修工事</td></tr>
+      <tr><th>対応エリア</th><td>準備中（今後、施工対応エリアを記載します）</td></tr>
+      <tr><th>所在地</th><td>準備中</td></tr>
+      <tr><th>電話番号</th><td>000-0000-0000</td></tr>
+      <tr><th>営業時間</th><td>準備中</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="contact" class="bg-sky">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">CONTACT</div>
+      <h2>お問い合わせ</h2>
+      <p>お見積り・ご相談は無料です。お気軽にご連絡ください。</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <h3>お電話でのご相談</h3>
+        <div class="big-tel">000-0000-0000</div>
+        <p class="note">受付時間：準備中</p>
+        <p class="note" style="margin-top:14px;">公式LINEからもご相談いただけます。まずは気軽にメッセージをお送りください。</p>
+        <a href="#" class="btn btn-primary">公式LINEで相談する</a>
+      </div>
+      <div class="contact-card">
+        <h3>フォームでのお問い合わせ</h3>
+        <form id="contact-form">
+          <div class="form-group">
+            <label>お名前<span class="req-badge">必須</span></label>
+            <input type="text" name="name" placeholder="山田 太郎" required>
+          </div>
+          <div class="form-group">
+            <label>フリガナ<span class="req-badge">必須</span></label>
+            <input type="text" name="kana" placeholder="ヤマダ タロウ" required>
+          </div>
+          <div class="form-group">
+            <label>メールアドレス<span class="req-badge">必須</span></label>
+            <input type="email" name="email" placeholder="example@mail.com" required>
+          </div>
+          <div class="form-group">
+            <label>電話番号<span class="opt-badge">任意</span></label>
+            <input type="tel" name="tel" placeholder="000-0000-0000">
+          </div>
+          <div class="form-group">
+            <label>ご相談内容<span class="req-badge">必須</span></label>
+            <select name="category" required>
+              <option>外壁塗装</option>
+              <option>防水工事</option>
+              <option>コーキング工事</option>
+              <option>外構工事</option>
+              <option>樋交換</option>
+              <option>補修工事</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>お問い合わせ内容<span class="req-badge">必須</span></label>
+            <textarea name="message" placeholder="ご相談内容をご記入ください" required></textarea>
+          </div>
+          <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width:100%;justify-content:center;border:none;cursor:pointer;">送信する</button>
+          <p id="contact-form-status" style="margin-top:14px;font-size:13px;"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-logo">松井塗装</div>
+    <div>© 2026 Matsui Tosou. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+
+  // stagger items: animate children in sequence when their container enters view
+  const staggerGroups = new Set();
+  document.querySelectorAll('.stagger-item').forEach(el=>{
+    if(el.parentElement) staggerGroups.add(el.parentElement);
+  });
+  const staggerIo = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const items = entry.target.querySelectorAll('.stagger-item');
+        items.forEach((item, i)=>{
+          const isMobile = window.innerWidth <= 820;
+          const staggerDelay = isMobile ? 0 : 110;
+          setTimeout(()=>{ item.classList.add('in'); }, i * staggerDelay);
+        });
+        staggerIo.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15});
+  staggerGroups.forEach(group=>staggerIo.observe(group));
+
+  // ===== お問い合わせフォーム送信（Google Apps Script連携） =====
+  // ここに、GASを「ウェブアプリとして導入」した際に発行されるURLを設定してください。
+  // 例: https://script.google.com/macros/s/xxxxxxxxxxxxxxxx/exec
+  const GAS_ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbzXkKjJ6J1nSVeZi1oYZwgwzr1d-fC5G4YPgj3D7h39rKsSoyP6Cue9wpdnZnt6yBg8Fg/exec";
+
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const statusEl = document.getElementById('contact-form-status');
+      const btnEl = document.getElementById('contact-submit-btn');
+
+      if (!GAS_ENDPOINT_URL || GAS_ENDPOINT_URL.indexOf('script.google.com') === -1) {
+        statusEl.textContent = '※送信先が未設定です。GASのURL設定が完了すると送信できるようになります。';
+        statusEl.style.color = '#c0392b';
+        return;
+      }
+
+      btnEl.disabled = true;
+      btnEl.textContent = '送信中...';
+      statusEl.textContent = '';
+
+      const formData = new FormData(contactForm);
+
+      fetch(GAS_ENDPOINT_URL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(function(){
+        statusEl.textContent = 'お問い合わせを送信しました。ご連絡ありがとうございます。';
+        statusEl.style.color = '#1e5a96';
+        contactForm.reset();
+      })
+      .catch(function(){
+        statusEl.textContent = '送信に失敗しました。お手数ですが、お電話にてご連絡ください。';
+        statusEl.style.color = '#c0392b';
+      })
+      .finally(function(){
+        btnEl.disabled = false;
+        btnEl.textContent = '送信する';
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
