@@ -921,6 +921,19 @@
 }
 </script>
 
+<script>
+  document.querySelectorAll('a[href^="https://lin.ee"]').forEach(el=>{
+    el.addEventListener('click', function(){
+      gtag('event', 'line_click', { 'event_category': 'engagement', 'event_label': 'LINE公式アカウント' });
+    });
+  });
+  document.querySelectorAll('a[href^="tel:"]').forEach(el=>{
+    el.addEventListener('click', function(){
+      gtag('event', 'tel_click', { 'event_category': 'engagement', 'event_label': '電話番号' });
+    });
+  });
+</script>
+
 </body>
 </html>
 Page_Up
