@@ -108,11 +108,16 @@ function collectContactStats_(start, end) {
 // ==== GA4（Analytics Data API）の集計 ====
 function collectGA4Stats_(start, end) {
   var tz = Session.getScriptTimeZone();
-  var request = {
-    dateRanges: [{
-      startDate: Utilities.formatDate(start, tz, 'yyyy-MM-dd'),
-      endDate: Utilities.formatDate(end, tz, 'yyyy-MM-dd')
-    }],
+  var dateRanges = [{
+    startDate: Utilities.formatDate(start, tz, 'yyyy-MM-dd'),
+    endDate: Utilities.formatDate(end, tz, 'yyyy-MM-dd')
+  }];
+
+  var result = { line_click: 0, tel_click: 0, totalUsers: 0 };
+
+  // イベント別（line_click / tel_click）の件数
+  var eventRequest = {
+    dateRanges: dateRanges,
     dimensions: [{ name: 'eventName' }],
     metrics: [{ name: 'eventCount' }],
     dimensionFilter: {
@@ -122,16 +127,23 @@ function collectGA4Stats_(start, end) {
       }
     }
   };
-
-  var response = AnalyticsData.Properties.runReport(request, GA4_PROPERTY_ID);
-  var result = { line_click: 0, tel_click: 0 };
-
-  if (response.rows) {
-    response.rows.forEach(function (row) {
+  var eventResponse = AnalyticsData.Properties.runReport(eventRequest, GA4_PROPERTY_ID);
+  if (eventResponse.rows) {
+    eventResponse.rows.forEach(function (row) {
       var name = row.dimensionValues[0].value;
       var count = Number(row.metricValues[0].value);
       if (result.hasOwnProperty(name)) result[name] = count;
     });
+  }
+
+  // サイト全体のユーザー数（ディメンションなしの全体集計のため、別リクエストで取得）
+  var userRequest = {
+    dateRanges: dateRanges,
+    metrics: [{ name: 'totalUsers' }]
+  };
+  var userResponse = AnalyticsData.Properties.runReport(userRequest, GA4_PROPERTY_ID);
+  if (userResponse.rows && userResponse.rows.length > 0) {
+    result.totalUsers = Number(userResponse.rows[0].metricValues[0].value);
   }
 
   return result;
@@ -147,7 +159,8 @@ function savePreviousStats_(contactStats, gaStats) {
   PropertiesService.getScriptProperties().setProperty('PREV_STATS', JSON.stringify({
     total: contactStats.total,
     line_click: gaStats.line_click,
-    tel_click: gaStats.tel_click
+    tel_click: gaStats.tel_click,
+    totalUsers: gaStats.totalUsers
   }));
 }
 
@@ -170,6 +183,7 @@ function sendReportEmail_(period, contactStats, gaStats, prev) {
     '<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;">' +
     '<tr><th>項目</th><th>件数</th></tr>' +
     '<tr><td>お問い合わせ件数</td><td>' + contactStats.total + diffText(contactStats.total, prev ? prev.total : null) + '</td></tr>' +
+    '<tr><td>サイト訪問者数（ユーザー数）</td><td>' + gaStats.totalUsers + diffText(gaStats.totalUsers, prev ? prev.totalUsers : null) + '</td></tr>' +
     '<tr><td>LINEボタンクリック数</td><td>' + gaStats.line_click + diffText(gaStats.line_click, prev ? prev.line_click : null) + '</td></tr>' +
     '<tr><td>電話番号クリック数</td><td>' + gaStats.tel_click + diffText(gaStats.tel_click, prev ? prev.tel_click : null) + '</td></tr>' +
     '</table>';
